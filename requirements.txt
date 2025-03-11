@@ -1,0 +1,5 @@
+numpy<2
+tqdm
+pymatgen
+rdkit-pypi
+tensorflow>=2.4
