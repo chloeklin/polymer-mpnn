@@ -8,6 +8,9 @@ from nfp.preprocessing.mol_preprocessor import SmilesPreprocessor, MolPreprocess
 from nfp.preprocessing.features import get_ring_size
 from tensorflow.keras import layers
 
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+
+
 # Load the input data
 # train_3D, valid_3D, test_3D_dft, test_3D_uff = pd.read_csv('../data/mol_train.csv'), pd.read_csv('../data/mol_valid.csv'), pd.read_csv('../data/mol_test.csv'), pd.read_csv('../data/mol_test_uff.csv')
 train_2D, valid_2D, test_2D = pd.read_csv('../data/smiles_train.csv'), pd.read_csv('../data/smiles_valid.csv'), pd.read_csv('../data/smiles_test.csv')
@@ -168,6 +171,8 @@ predictions = {
 
 # Construct the tf.keras model
 model = tf.keras.Model([atom, bond, connectivity], outputs=predictions)
+print("Running on: ", "GPU" if tf.test.is_gpu_available() else "CPU")
+
 
 # Initial learning rate
 initial_learning_rate = 1E-3  # From the paper
