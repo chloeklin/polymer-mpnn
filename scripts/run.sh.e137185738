@@ -1,0 +1,471 @@
+Loading python3/3.9.2
+  Loading requirement: intel-mkl/2020.3.304
+Currently Loaded Modulefiles:
+ 1) intel-mkl/2020.3.304   3) cuda/12.3.2         
+ 2) python3/3.9.2          4) cudnn/8.9.7-cuda12  
+2025-03-18 18:16:39.175399: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-18 18:16:40.037406: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1742282200.275903  556761 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1742282200.383673  556761 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1742282201.115498  556761 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742282201.115580  556761 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742282201.115589  556761 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742282201.115596  556761 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-03-18 18:16:41.255433: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1742282270.800535  556761 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3e:00.0, compute capability: 7.0
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_1' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_2' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_3' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+WARNING:tensorflow:From /scratch/um09/hl4138/polymer-mpnn/scripts/2D_mpnn.py:174: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.config.list_physical_devices('GPU')` instead.
+I0000 00:00:1742282475.992646  556761 gpu_device.cc:2019] Created device /device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3e:00.0, compute capability: 7.0
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_1' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_2' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_3' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce_1' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_4' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_5' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce_2' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1742282488.682012  556898 service.cc:152] XLA service 0x14f3180034e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1742282488.682114  556898 service.cc:160]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2025-03-18 18:21:29.458228: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1742282492.043252  556898 cuda_dnn.cc:529] Loaded cuDNN version 90300
+I0000 00:00:1742282497.961295  556898 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+2025-03-18 18:26:09.210311: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:26:50.631596: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:27:25.804894: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 276 bytes spill stores, 260 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 18:27:53.826059: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 18:28:23.294829: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:28:30.588111: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:28:37.332653: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:28:44.359536: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:28:50.930374: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 18:28:58.758494: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:29:05.853594: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:29:12.865592: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:29:19.799992: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:29:27.032595: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:29:33.589791: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:29:40.667915: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:29:47.214736: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:29:55.154171: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 18:30:02.289465: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 18:30:08.821829: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 248 bytes spill stores, 244 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 112 bytes spill stores, 112 bytes spill loads
+
+2025-03-18 18:30:16.209621: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 18:30:23.397902: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:30:29.981480: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 18:30:36.501872: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 18:30:43.057549: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:30:50.066649: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:30:57.284642: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 18:31:11.817150: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:31:18.694546: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:31:26.377271: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:31:33.731362: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 18:31:40.825664: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 18:31:48.497735: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:31:56.530277: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:32:05.676691: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 18:32:13.239489: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 18:32:20.440755: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 18:32:34.252902: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 18:32:41.676173: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:32:49.549123: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 284 bytes spill stores, 268 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 18:32:56.775544: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:33:03.663002: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:33:10.994675: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 108 bytes spill stores, 108 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 68 bytes spill stores, 68 bytes spill loads
+
+2025-03-18 18:33:18.525401: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 18:33:25.453559: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 280 bytes spill stores, 264 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 18:33:32.580773: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 60 bytes spill stores, 60 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 28 bytes spill stores, 28 bytes spill loads
+
+2025-03-18 18:33:39.532030: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 60 bytes spill stores, 60 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 28 bytes spill stores, 28 bytes spill loads
+
+2025-03-18 19:08:32.662466: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-03-18 19:08:32.663132: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_12]]
+2025-03-18 19:08:32.663170: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:08:32.663182: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:08:32.663194: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:08:32.663205: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:08:32.663219: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:08:32.663229: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:08:32.663262: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:08:32.663276: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:08:32.663287: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:08:32.663297: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:08:32.663330: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/trainers/epoch_iterator.py:151: UserWarning: Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches. You may need to use the `.repeat()` function when building your dataset.
+  self._interrupted_warning()
+2025-03-18 19:10:42.682523: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2025-03-18 19:10:42.682641: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:10:42.682655: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:10:42.682667: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:10:42.682678: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:10:42.682689: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:10:42.682699: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:10:42.682727: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:10:42.682738: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:10:42.682748: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:10:42.682758: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:10:42.682785: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:12:26.309133: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:12:33.160543: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:12:40.457473: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:12:47.692602: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:12:54.867776: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:13:01.967845: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:13:08.790810: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:13:22.799710: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 108 bytes spill stores, 108 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 68 bytes spill stores, 68 bytes spill loads
+
+2025-03-18 19:13:29.775790: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 104 bytes spill stores, 104 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 64 bytes spill stores, 64 bytes spill loads
+
+2025-03-18 19:13:36.587127: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:13:43.946606: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 284 bytes spill stores, 268 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:13:51.274797: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:13:58.516969: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 280 bytes spill stores, 264 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:14:13.194160: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:14:20.320787: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:17:35.258453: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_22]]
+2025-03-18 19:18:24.772789: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:18:31.822870: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:18:38.908296: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:18:46.611550: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:18:53.769972: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:19:00.627637: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:19:07.460355: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:19:14.154171: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:19:29.132815: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:19:36.245022: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:19:43.051474: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:19:50.490207: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 108 bytes spill stores, 108 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 68 bytes spill stores, 68 bytes spill loads
+
+2025-03-18 19:19:57.459939: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:20:04.531861: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 60 bytes spill stores, 60 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 28 bytes spill stores, 28 bytes spill loads
+
+2025-03-18 19:20:11.399262: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:22:25.582646: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:22:34.688240: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:22:42.232517: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:24:00.577458: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:24:00.577517: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:24:00.577529: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:24:00.577540: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:24:00.577551: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:24:00.577561: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:24:00.577579: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:24:00.577590: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:24:00.577601: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:24:00.577610: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:24:00.577642: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:24:01.996104: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_22]]
+2025-03-18 19:24:01.996190: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:24:44.859276: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:24:51.723941: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:24:59.367714: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 40 bytes spill stores, 40 bytes spill loads
+
+2025-03-18 19:25:14.133877: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 284 bytes spill stores, 268 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:25:21.010711: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:25:28.096272: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:25:34.855405: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 284 bytes spill stores, 268 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:25:41.881085: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:26:48.661083: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:26:48.661150: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:26:48.661164: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:26:48.661174: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:26:48.661187: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:26:48.661197: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:26:48.661218: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:26:48.661230: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:26:48.661241: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:26:48.661251: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:26:48.661282: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:26:49.546774: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:26:49.546849: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:26:49.546896: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:26:49.546913: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:26:49.546923: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:27:18.305796: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 276 bytes spill stores, 260 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:27:27.605420: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:27:34.719866: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:27:41.704692: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:27:48.335032: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 260 bytes spill stores, 256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 84 bytes spill stores, 84 bytes spill loads
+
+2025-03-18 19:28:32.904465: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:28:32.904536: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:28:32.904553: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:28:32.904564: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:28:32.904575: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:28:32.904586: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:28:32.904602: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:28:32.904612: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:28:32.904623: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:28:32.904633: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:28:32.904660: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:28:49.353822: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:28:57.379782: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 108 bytes spill stores, 108 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 68 bytes spill stores, 68 bytes spill loads
+
+2025-03-18 19:29:04.430618: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 280 bytes spill stores, 264 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:29:11.728153: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:29:18.702391: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 24 bytes spill loads
+
+2025-03-18 19:30:37.165989: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 276 bytes spill stores, 260 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:30:46.028276: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:30:53.144570: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 276 bytes spill stores, 260 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:31:58.236252: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_22]]
+2025-03-18 19:31:58.236328: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:31:58.236355: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:32:06.571284: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 8 bytes spill stores, 4 bytes spill loads
+
+2025-03-18 19:32:20.867057: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:32:27.973266: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 24 bytes spill stores, 20 bytes spill loads
+
+2025-03-18 19:34:41.662593: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:34:41.662676: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:34:41.662701: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:34:41.662713: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:34:41.662726: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:34:41.662736: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:34:41.662752: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:34:41.662764: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:34:41.662777: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:34:41.662788: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:34:41.662824: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:34:42.497999: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:34:42.498054: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:34:42.498068: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:34:42.498079: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:34:42.498092: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:34:42.498119: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:34:58.221659: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 120 bytes spill stores, 120 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 80 bytes spill stores, 80 bytes spill loads
+
+2025-03-18 19:35:04.971809: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 276 bytes spill stores, 260 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion', 120 bytes spill stores, 120 bytes spill loads
+
+2025-03-18 19:35:49.570419: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:35:49.570471: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:35:49.570486: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:35:49.570496: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:35:49.570507: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:35:49.570518: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:35:49.570533: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:35:49.570555: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:35:49.570566: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13955167114170886588
+2025-03-18 19:35:49.570576: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 4972316865450499722
+2025-03-18 19:35:49.570587: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:35:50.875819: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7645010486223258257
+2025-03-18 19:35:50.875876: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 14235029206933338931
+2025-03-18 19:35:50.875891: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5215330116092443731
+2025-03-18 19:35:50.875902: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 16540818179074923799
+2025-03-18 19:35:50.875913: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13795713081725120055
+2025-03-18 19:35:50.875924: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 11948856673815338983
+2025-03-18 19:35:50.875939: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 13110081247519615372
+2025-03-18 19:35:50.875950: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 5039476907641162056
+2025-03-18 19:35:50.875979: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 7769821962929260290
+2025-03-18 19:36:18.112190: W external/local_xla/xla/stream_executor/cuda/cuda_command_buffer.cc:668] Retry CUDA graph instantiation after OOM error
+Traceback (most recent call last):
+  File "/scratch/um09/hl4138/polymer-mpnn/scripts/2D_mpnn.py", line 196, in <module>
+    model.fit(train_2D_dataset, validation_data=valid_2D_dataset, epochs=500)
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node StatefulPartitionedCall defined at (most recent call last):
+  File "/scratch/um09/hl4138/polymer-mpnn/scripts/2D_mpnn.py", line 196, in <module>
+
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/backend/tensorflow/trainer.py", line 371, in fit
+
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/backend/tensorflow/trainer.py", line 219, in function
+
+  File "/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/backend/tensorflow/trainer.py", line 132, in multi_step_on_iterator
+
+Underlying backend ran out of memory trying to instantiate graph with 250 nodes and 0 conditionals (total of 0 alive graphs in the process). You can try to (a) Give more memory to the driver by reducing XLA_CLIENT_MEM_FRACTION (b) Disable command buffers with 'XLA_FLAGS=--xla_gpu_enable_command_buffer=' (empty set). Original error: Failed to instantiate CUDA graph: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+	 [[{{node StatefulPartitionedCall}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_multi_step_on_iterator_261906]

@@ -1,0 +1,56 @@
+Loading python3/3.9.2
+  Loading requirement: intel-mkl/2020.3.304
+Currently Loaded Modulefiles:
+ 1) intel-mkl/2020.3.304   3) cuda/12.3.2         
+ 2) python3/3.9.2          4) cudnn/8.9.7-cuda12  
+2025-03-19 15:46:07.095840: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-19 15:46:07.942707: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1742359568.212796  609880 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1742359568.327197  609880 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1742359569.015723  609880 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742359569.015782  609880 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742359569.015789  609880 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1742359569.015794  609880 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-03-19 15:46:09.144469: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1742359656.693437  609880 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3d:00.0, compute capability: 7.0
+I0000 00:00:1742359656.694716  609880 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 31134 MB memory:  -> device: 1, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3e:00.0, compute capability: 7.0
+I0000 00:00:1742359656.695236  609880 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 31134 MB memory:  -> device: 2, name: Tesla V100-SXM2-32GB, pci bus id: 0000:b1:00.0, compute capability: 7.0
+I0000 00:00:1742359656.695749  609880 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 31134 MB memory:  -> device: 3, name: Tesla V100-SXM2-32GB, pci bus id: 0000:b2:00.0, compute capability: 7.0
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_1' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_2' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'global_update_3' (of type GlobalUpdate) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_1' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_2' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_3' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce_1' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_4' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'gather_5' (of type Gather) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages/keras/src/layers/layer.py:939: UserWarning: Layer 'reduce_2' (of type Reduce) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1742359857.989828  610012 service.cc:152] XLA service 0x1538a400b230 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1742359857.989938  610012 service.cc:160]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+I0000 00:00:1742359857.989953  610012 service.cc:160]   StreamExecutor device (1): Tesla V100-SXM2-32GB, Compute Capability 7.0
+I0000 00:00:1742359857.989959  610012 service.cc:160]   StreamExecutor device (2): Tesla V100-SXM2-32GB, Compute Capability 7.0
+I0000 00:00:1742359857.989974  610012 service.cc:160]   StreamExecutor device (3): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2025-03-19 15:50:58.795084: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1742359861.636798  610012 cuda_dnn.cc:529] Loaded cuDNN version 90300
+I0000 00:00:1742359867.980329  610012 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+=>> PBS: job killed: walltime 993 exceeded limit 900

@@ -10,6 +10,8 @@ from tensorflow.keras import layers
 
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
+from tensorflow.keras import mixed_precision
+mixed_precision.set_global_policy('mixed_float16')
 
 # Load the input data
 # train_3D, valid_3D, test_3D_dft, test_3D_uff = pd.read_csv('../data/mol_train.csv'), pd.read_csv('../data/mol_valid.csv'), pd.read_csv('../data/mol_test.csv'), pd.read_csv('../data/mol_test_uff.csv')
@@ -70,7 +72,7 @@ train_2D_dataset = tf.data.Dataset.from_generator(
                row.lumo_extrapolated, row.gap_extrapolated, row.optical_lumo_extrapolated))  # Multiple properties
              for i, row in train_2D.iterrows()),
     output_signature=(
-        preprocessor.output_signature, 
+        smiles_preprocessor.output_signature, 
         (tf.TensorSpec((), dtype=tf.float32),  
          tf.TensorSpec((), dtype=tf.float32),  
          tf.TensorSpec((), dtype=tf.float32),  
@@ -171,8 +173,6 @@ predictions = {
 
 # Construct the tf.keras model
 model = tf.keras.Model([atom, bond, connectivity], outputs=predictions)
-print("Running on: ", "GPU" if tf.test.is_gpu_available() else "CPU")
-
 
 # Initial learning rate
 initial_learning_rate = 1E-3  # From the paper
@@ -189,8 +189,19 @@ lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
 optimizer = tf.keras.optimizers.Adam(learning_rate=lr_schedule)
 
 
-model.compile(loss='mae', optimizer=optimizer)
-
+model.compile(
+    optimizer=optimizer,
+    loss={
+        "gap": "mae",
+        "homo": "mae",
+        "lumo": "mae",
+        "spectral_overlap": "mae",
+        "homo_extrapolated": "mae",
+        "lumo_extrapolated": "mae",
+        "gap_extrapolated": "mae",
+        "optical_lumo_extrapolated": "mae",
+    }
+)
 # Fit the model. The first epoch is slower, since it needs to cache
 # the preprocessed molecule inputs
 model.fit(train_2D_dataset, validation_data=valid_2D_dataset, epochs=500)

@@ -2,13 +2,13 @@
 
 #PBS -q gpuvolta
 #PBS -P um09
-#PBS -l ncpus=12
-#PBS -l ngpus=1
-#PBS -l mem=128GB
-#PBS -l walltime=00:10:00
+#PBS -l ncpus=48
+#PBS -l ngpus=4
+#PBS -l mem=40GB
+#PBS -l walltime=00:15:00
 #PBS -l storage=scratch/um09
-#PBS -l jobfs=100GB
-#PBS -v PYTHONPATH=/scratch/um09/hl4138/llm-venv/lib/python3.10/site-packages
+#PBS -l jobfs=5GB
+#PBS -v PYTHONPATH=/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages
 
 
 
@@ -19,6 +19,6 @@ module list
 
 source polympnn-venv/bin/activate
 
-cd polymer-mpnn
+cd polymer-mpnn/scripts/
 
-python3 scripts/2D_mpnn.py 
+python3 2D_mpnn.py 
