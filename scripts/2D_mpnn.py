@@ -16,6 +16,10 @@ mixed_precision.set_global_policy('mixed_float16')
 # Load the input data
 # train_3D, valid_3D, test_3D_dft, test_3D_uff = pd.read_csv('../data/mol_train.csv'), pd.read_csv('../data/mol_valid.csv'), pd.read_csv('../data/mol_test.csv'), pd.read_csv('../data/mol_test_uff.csv')
 train_2D, valid_2D, test_2D = pd.read_csv('../data/smiles_train.csv'), pd.read_csv('../data/smiles_valid.csv'), pd.read_csv('../data/smiles_test.csv')
+train_2D = train_2D.dropna()
+valid_2D = valid_2D.dropna()
+test_2D = test_2D.dropna()
+print(f"Rows after dropping NaNs: Train - {len(train_2D)}; Valid - {len(valid_2D)}; Test - {len(test_2D)}")
 
 
 # Define how to featurize the input molecules

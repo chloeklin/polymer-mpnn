@@ -2,8 +2,8 @@
 
 #PBS -q gpuvolta
 #PBS -P um09
-#PBS -l ncpus=48
-#PBS -l ngpus=4
+#PBS -l ncpus=12
+#PBS -l ngpus=1
 #PBS -l mem=40GB
 #PBS -l walltime=00:15:00
 #PBS -l storage=scratch/um09
