@@ -7,11 +7,13 @@ import nfp
 from nfp.preprocessing.mol_preprocessor import SmilesPreprocessor, MolPreprocessor
 from nfp.preprocessing.features import get_ring_size
 from tensorflow.keras import layers
+from sklearn.metrics import mean_absolute_error
+
 
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
-from tensorflow.keras import mixed_precision
-mixed_precision.set_global_policy('mixed_float16')
+# from tensorflow.keras import mixed_precision
+# mixed_precision.set_global_policy('mixed_float16')
 
 # Load the input data
 # train_3D, valid_3D, test_3D_dft, test_3D_uff = pd.read_csv('../data/mol_train.csv'), pd.read_csv('../data/mol_valid.csv'), pd.read_csv('../data/mol_test.csv'), pd.read_csv('../data/mol_test_uff.csv')
@@ -86,7 +88,7 @@ train_2D_dataset = tf.data.Dataset.from_generator(
          tf.TensorSpec((), dtype=tf.float32),  
          tf.TensorSpec((), dtype=tf.float32))  
 )).cache().shuffle(buffer_size=200)\
-  .padded_batch(batch_size=64)\
+  .padded_batch(batch_size=8)\
   .prefetch(tf.data.experimental.AUTOTUNE)
 
 
@@ -106,7 +108,7 @@ valid_2D_dataset = tf.data.Dataset.from_generator(
          tf.TensorSpec((), dtype=tf.float32),  
          tf.TensorSpec((), dtype=tf.float32))  
 )).cache()\
-    .padded_batch(batch_size=64)\
+    .padded_batch(batch_size=8)\
     .prefetch(tf.data.experimental.AUTOTUNE)
 
 test_2D_dataset = tf.data.Dataset.from_generator(
@@ -114,16 +116,16 @@ test_2D_dataset = tf.data.Dataset.from_generator(
              for smiles in test_2D.smiles.to_numpy()),
     output_signature=(
         smiles_preprocessor.output_signature,
-        (tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32),  
-         tf.TensorSpec((), dtype=tf.float32))
+        # (tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32),  
+        #  tf.TensorSpec((), dtype=tf.float32))
   ))\
-    .padded_batch(batch_size=64)\
+    .padded_batch(batch_size=8)\
     .prefetch(tf.data.experimental.AUTOTUNE)
 
 ## Define model
@@ -208,4 +210,28 @@ model.compile(
 )
 # Fit the model. The first epoch is slower, since it needs to cache
 # the preprocessed molecule inputs
-model.fit(train_2D_dataset, validation_data=valid_2D_dataset, epochs=500)
+train_2D_dataset = train_2D_dataset.repeat()
+batch_size=8
+model.fit(train_2D_dataset, validation_data=valid_2D_dataset, epochs=500, steps_per_epoch=len(train_2D) // batch_size, validation_steps=len(valid_2D) // batch_size)
+
+# Get predictions on test set
+preds = model.predict(test_2D_dataset)
+true_values = test_2D[[
+    "gap", "homo", "lumo", "spectral_overlap",
+    "homo_extrapolated", "lumo_extrapolated", 
+    "gap_extrapolated", "optical_lumo_extrapolated"
+]].reset_index(drop=True)
+
+# Step 3: Flatten predictions and compute MAE
+mae_results = {}
+
+for key in preds.keys():
+    y_pred = preds[key].squeeze()  # shape (N, 1) -> (N,)
+    y_true = true_values[key].values
+    mae_results[key] = mean_absolute_error(y_true, y_pred)
+
+# Print results
+for prop, mae in mae_results.items():
+    print(f"MAE for {prop}: {mae:.4f}")
+overall_mae = np.mean(list(mae_results.values()))
+print(f"Average MAE across all properties: {overall_mae:.4f}")

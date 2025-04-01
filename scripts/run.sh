@@ -1,13 +1,12 @@
 #!/bin/bash
 
-#PBS -q gpuvolta
+#PBS -q normal
 #PBS -P um09
-#PBS -l ncpus=12
-#PBS -l ngpus=1
-#PBS -l mem=40GB
-#PBS -l walltime=00:15:00
+#PBS -l ncpus=96
+#PBS -l mem=150GB
+#PBS -l walltime=04:00:00
 #PBS -l storage=scratch/um09
-#PBS -l jobfs=5GB
+#PBS -l jobfs=20GB
 #PBS -v PYTHONPATH=/scratch/um09/hl4138/polympnn-venv/lib/python3.9/site-packages
 
 
