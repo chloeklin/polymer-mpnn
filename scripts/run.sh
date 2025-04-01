@@ -18,6 +18,14 @@ module list
 
 source polympnn-venv/bin/activate
 
-cd polymer-mpnn/scripts/
+cd polymer-mpnn/
+tar -xzf data.tar.gz -C $JOBFS
 
-python3 2D_mpnn.py 
+cd scripts/
+
+python3 2D_mpnn.py \
+    --train_path $JOBFS/data/smiles_train.csv \
+    --val_path $JOBFS/data/smiles_val.csv \
+    --test_path $JOBFS/data/smiles_test.csv
+
+

@@ -8,6 +8,15 @@ from nfp.preprocessing.mol_preprocessor import SmilesPreprocessor, MolPreprocess
 from nfp.preprocessing.features import get_ring_size
 from tensorflow.keras import layers
 from sklearn.metrics import mean_absolute_error
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--train_path', type=str, required=True)
+parser.add_argument('--val_path', type=str, required=True)
+parser.add_argument('--test_path', type=str, required=True)
+args = parser.parse_args()
+
 
 
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
@@ -17,7 +26,7 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
 # Load the input data
 # train_3D, valid_3D, test_3D_dft, test_3D_uff = pd.read_csv('../data/mol_train.csv'), pd.read_csv('../data/mol_valid.csv'), pd.read_csv('../data/mol_test.csv'), pd.read_csv('../data/mol_test_uff.csv')
-train_2D, valid_2D, test_2D = pd.read_csv('../data/smiles_train.csv'), pd.read_csv('../data/smiles_valid.csv'), pd.read_csv('../data/smiles_test.csv')
+train_2D, valid_2D, test_2D = pd.read_csv(args.train_path), pd.read_csv(args.val_path), pd.read_csv(args.test_path)
 train_2D = train_2D.dropna()
 valid_2D = valid_2D.dropna()
 test_2D = test_2D.dropna()
